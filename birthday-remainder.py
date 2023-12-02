@@ -42,15 +42,19 @@ class BirthdayRemainder:
 obj=BirthdayRemainder()
 obj.collect_birthday_data()
 obj.find_upcoming_birthday()
-getting_choice=input("Do you want to continue on this birthday remainder..![yes\no]")
-if getting_choice.casefold()=="yes":
-    obj=BirthdayRemainder()
-    obj.collect_birthday_data()
-    obj.find_upcoming_birthday()
-elif getting_choice.casefold()=="no":
-    print("birthday remainder is going to exit....!")
-    exit()
-else:
-    print("Enter a  valid input")
-    exit()
+def continue_choice():
+    getting_choice=input("Do you want to continue on this birthday remainder..![yes\no]")
+    if getting_choice.casefold()=="yes":
+        obj=BirthdayRemainder()
+        obj.collect_birthday_data()
+        obj.find_upcoming_birthday()
+    elif getting_choice.casefold()=="no":
+        print("birthday remainder is going to exit....!")
+        exit()
+    else:
+        print("Enter a  valid input")
+        continue_choice
+if __name__=="__main__":
+ continue_choice()
+    
             
