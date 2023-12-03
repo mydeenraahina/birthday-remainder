@@ -53,8 +53,7 @@ def continue_choice():
         exit()
     else:
         print("Enter a  valid input")
-        continue_choice
-if __name__=="__main__":
- continue_choice()
+        continue_choice()
+continue_choice()
     
             
